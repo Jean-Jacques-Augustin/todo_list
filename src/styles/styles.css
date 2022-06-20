@@ -1,0 +1,57 @@
+.main_container {
+     margin-top: 10vh;
+     min-height: calc(90vh - 5px);
+}
+
+.main_page {
+     min-height: calc(90vh - 10px);
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+}
+
+.navbar_nav {
+     height: 10vh;
+     display: "flex";
+     flex-direction: row;
+     align-content: center;
+     justify-content: space-between !important;
+     flex-wrap: nowrap;
+}
+.navbar_nav_connected {
+     height: 10vh;
+     display: "flex";
+     align-content: center;
+     justify-content: center;
+}
+
+.centered_parent {
+     min-height: calc(90vh - 10px);
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+}
+
+.box_login {
+     margin: auto;
+}
+
+.add_task {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.add_task_root {
+     display: flex;
+     position: absolute;
+     bottom: 2vh;
+     top: auto;
+}
+.cardAction_task {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+}
