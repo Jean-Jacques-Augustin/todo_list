@@ -1,9 +1,6 @@
 import React from "react";
 import {
-     Button,
      Grid,
-     Typography,
-     TextareaAutosize,
      Dialog,
      DialogActions,
      DialogTitle,
