@@ -8,6 +8,9 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import { userDB } from "./usersDB";
+import { Button, Grid, IconButton } from "@mui/material";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import BlockIcon from "@mui/icons-material/Block";
 
 const columns = [
      { id: "0", nom: "Nom" },
@@ -76,7 +79,32 @@ export default function Users() {
                                                        {row.type}
                                                   </TableCell>
                                                   <TableCell align="left">
-                                                       {row.nom}
+                                                       <div>
+                                                            <Grid
+                                                                 container
+                                                                 direction="row"
+                                                                 justifyContent="space-around"
+                                                                 alignItems="center"
+                                                                 spacing={2}
+                                                            >
+                                                                 <Grid item>
+                                                                      <IconButton
+                                                                           aria-label="supprimer"
+                                                                           color="primary"
+                                                                      >
+                                                                           <DeleteOutlineIcon />
+                                                                      </IconButton>
+                                                                 </Grid>
+                                                                 <Grid item>
+                                                                      <IconButton
+                                                                           aria-label="bloquer"
+                                                                           color="secondary"
+                                                                      >
+                                                                           <BlockIcon />
+                                                                      </IconButton>
+                                                                 </Grid>
+                                                            </Grid>
+                                                       </div>
                                                   </TableCell>
                                              </TableRow>
                                         );

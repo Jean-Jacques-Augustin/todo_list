@@ -13,7 +13,6 @@ import Admin from "./pages/admin/admin";
 export default function Main() {
      return (
           <Container>
-               {/*connected ? <Tasks /> : <Login />*/}
                <div className="main_container">
                     <Routes>
                          <Route index path="/" element={<MainPages />} />

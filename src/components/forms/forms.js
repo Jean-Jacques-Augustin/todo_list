@@ -1,6 +1,5 @@
 import { Button, TextField } from "@mui/material";
 import "../../styles/forms.css";
-import { Link } from "react-router-dom";
 
 export const CustomButton = (props) => {
      return (
@@ -26,7 +25,7 @@ export const CustomTextField = (props) => {
                size={"medium"}
                value={props.value}
                label={props.label}
-               variant="outlined"
+               variant="filled"
                onChange={props.onChange}
                className={"TextField"}
                error={props.error}

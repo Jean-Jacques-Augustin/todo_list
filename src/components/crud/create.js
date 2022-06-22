@@ -7,6 +7,7 @@ import {
      DialogContent,
      DialogContentText,
      Slide,
+     Typography,
 } from "@mui/material";
 import { CustomButton, CustomTextField } from "../forms/forms";
 import "../../styles/styles.css";
@@ -19,13 +20,9 @@ export default function Create(props) {
      return (
           <Dialog
                open={props.open}
-               TransitionComponent={Transition}
-               keepMounted
                onClose={props.handleClose}
                aria-describedby="dialogue"
           >
-               <DialogTitle>{"Ajouter une nouvelle tache"}</DialogTitle>
-               <br />
                <DialogContent>
                     <DialogContentText id="dialogue">
                          <Grid
@@ -35,6 +32,11 @@ export default function Create(props) {
                               alignItems="center"
                               spacing={2}
                          >
+                              <Grid item md={12} xs={12}>
+                                   <Typography gutterBottom variant="h6">
+                                        Nouvelle tache
+                                   </Typography>
+                              </Grid>
                               <Grid item md={12} xs={12}>
                                    <CustomTextField
                                         type={"text"}
@@ -47,18 +49,16 @@ export default function Create(props) {
                                         label="Votre tache"
                                    />
                               </Grid>
+                              <Grid item md={12} xs={12}>
+                                   <CustomButton
+                                        fullWidth
+                                        name={"Ajouter"}
+                                        color={"secondary"}
+                                   />
+                              </Grid>
                          </Grid>
                     </DialogContentText>
                </DialogContent>
-               <DialogActions>
-                    <div className="cardAction_task">
-                         <CustomButton
-                              fullWidth
-                              name={"Ajouter"}
-                              color={"secondary"}
-                         />
-                    </div>
-               </DialogActions>
           </Dialog>
      );
 }

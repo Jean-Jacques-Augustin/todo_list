@@ -3,7 +3,7 @@ import Main from "./main";
 import NavigationNotConnected from "./components/navigationNotConected";
 import NavigationConnected from "./components/navigationConected";
 
-export const connected = false;
+export const connected = true;
 
 function App() {
      return (

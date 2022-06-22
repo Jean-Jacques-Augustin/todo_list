@@ -1,6 +1,6 @@
 .main_container {
      margin-top: 10vh;
-     
+
      min-height: calc(90vh - 5px);
 }
 
@@ -10,7 +10,6 @@
      display: flex;
      justify-content: center;
      align-content: center;
-
 }
 
 .navbar_nav {
@@ -25,7 +24,7 @@
      height: 10vh;
      display: "flex";
      align-content: center;
-     justify-content: center;
+     justify-content: space-between;
 }
 
 .centered_parent {
