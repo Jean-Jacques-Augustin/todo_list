@@ -13,6 +13,7 @@ function App() {
                ) : (
                     <NavigationNotConnected />
                )}
+
                <Main />
           </div>
      );

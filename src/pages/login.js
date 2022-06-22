@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Box } from "@mui/system";
-import { Button, Grid, Paper, Typography } from "@mui/material";
+import { Avatar, Button, Grid, Paper, Typography } from "@mui/material";
 import { CustomTextField } from "../components/forms/forms";
 import { CustomButton } from "./../components/forms/forms";
 import "../styles/styles.css";
+import iconMeduim from "../icons/ICON/nomerikia_icon_small.png";
 
 export default function Login() {
      const [email, setemail] = useState("");
@@ -18,7 +19,11 @@ export default function Login() {
 
      return (
           <Box className="centered_parent">
-               <Paper sx={{ width: 400 }} className={"box_login"}>
+               <Paper
+                    variant="outlined"
+                    sx={{ width: 400 }}
+                    className={"box_login"}
+               >
                     <Grid
                          container
                          direction="row"
@@ -27,6 +32,18 @@ export default function Login() {
                          spacing={2}
                          padding={2}
                     >
+                         <Grid item md={12} xs={12}>
+                              <div
+                                   style={{
+                                        justifyContent: "center",
+                                        display: "flex",
+                                        margin: 0,
+                                        padding: 0,
+                                   }}
+                              >
+                                   <Avatar alt="Remy Sharp" src={iconMeduim} />
+                              </div>
+                         </Grid>
                          <Grid item md={12} xs={12}>
                               <Typography variant="h6">Connexion</Typography>
                          </Grid>

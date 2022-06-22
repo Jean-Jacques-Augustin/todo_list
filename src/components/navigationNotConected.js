@@ -1,21 +1,16 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
 import "../styles/styles.css";
 import { CustomButton } from "./forms/forms";
+import logoSmall from "../icons/LOGO/nomerikia_logo_small.png";
 
 export default function NavigationNotConnected() {
      return (
           <AppBar variant="outlined" color="inherit">
                <Container>
                     <Toolbar className="navbar_nav">
-                         <Typography
-                              variant={"h6"}
-                              className={"titre"}
-                              fontWeight={"bold"}
-                         >
-                              Numérique
-                         </Typography>
+                         <img src={logoSmall} alt="Logo du site" />
                          <div>
                               <CustomButton name="Connexion" color="primary" />
                               <CustomButton

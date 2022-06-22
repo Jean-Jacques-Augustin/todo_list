@@ -8,7 +8,7 @@ export default function MainPages() {
           <div className="main_page">
                <Box>
                     <div>
-                         <Typography variant="h3">Numérique</Typography>
+                         <Typography variant="h1">Numérique</Typography>
                          <Typography variant="h1"></Typography>
                     </div>
                </Box>

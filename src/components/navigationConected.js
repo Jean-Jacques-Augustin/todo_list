@@ -5,7 +5,7 @@ import "../styles/styles.css";
 
 export default function NavigationConnected() {
      return (
-          <AppBar variant="outlined" color="primary">
+          <AppBar variant="outlined" color="inherit">
                <Container>
                     <Toolbar className="navbar_nav_connected">
                          <Typography

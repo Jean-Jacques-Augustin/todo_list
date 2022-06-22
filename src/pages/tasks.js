@@ -8,19 +8,11 @@ import {
      CardContent,
      Grid,
      IconButton,
-     Slide,
-     Dialog,
-     DialogTitle,
-     DialogContent,
-     DialogContentText,
-     DialogActions,
-     Button,
      Divider,
 } from "@mui/material";
 import { Task } from "./testDB";
 import "../styles/styles.css";
 import Fab from "@mui/material/Fab";
-
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
