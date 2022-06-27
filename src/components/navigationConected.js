@@ -1,8 +1,6 @@
 import {
      AppBar,
-     Fab,
      Toolbar,
-     Typography,
      Avatar,
      Chip,
      Hidden,

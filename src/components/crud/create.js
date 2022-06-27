@@ -2,8 +2,6 @@ import React from "react";
 import {
      Grid,
      Dialog,
-     DialogActions,
-     DialogTitle,
      DialogContent,
      DialogContentText,
      Slide,
@@ -33,7 +31,7 @@ export default function Create(props) {
                               spacing={2}
                          >
                               <Grid item md={12} xs={12}>
-                                   <Typography gutterBottom variant="h6">
+                                   <Typography variant="h6">
                                         Nouvelle tache
                                    </Typography>
                               </Grid>

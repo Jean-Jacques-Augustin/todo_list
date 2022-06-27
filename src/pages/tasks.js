@@ -14,6 +14,7 @@ import {
      MenuItem,
      ListItemIcon,
      ListItemText,
+     Toolbar,
 } from "@mui/material";
 import { Task } from "./testDB";
 import "../styles/styles.css";
@@ -27,6 +28,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import MenuAction from "./../components/forms/menu";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRenameOutlineOutlined";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 const ActionButton = [
      { name: "Supprimer", icon: <DeleteOutlineOutlinedIcon /> },
@@ -46,7 +49,7 @@ const SearchBar = () => {
                     component="form"
                     sx={{
                          borderRadius: 10,
-                         p: "2px 8px",
+                         p: "2px 5px",
                          display: "flex",
                          alignItems: "center",
                          width: 300,
@@ -67,6 +70,7 @@ const SearchBar = () => {
 
 export default function Tasks() {
      const [open, setOpen] = React.useState(false);
+     const [dialOpen, setDialOpen] = useState(false);
      const handleClickOpen = () => {
           setOpen(true);
      };
@@ -82,6 +86,8 @@ export default function Tasks() {
           setAnchorEl(null);
      };
      const openMenue = Boolean(anchorEl);
+
+     //Action atao amin'ny j'aime
 
      return (
           <Box className="main_container">
@@ -124,7 +130,13 @@ export default function Tasks() {
                                              <Divider />
                                              <div className="cardAction_task">
                                                   <IconButton aria-label="Ajouter dans favoris">
-                                                       <FavoriteIcon />
+                                                       <FavoriteIcon
+                                                            color={
+                                                                 item.favorite
+                                                                      ? "secondary"
+                                                                      : ""
+                                                            }
+                                                       />
                                                   </IconButton>
                                                   <IconButton aria-label="partager">
                                                        <ShareIcon />
@@ -151,26 +163,44 @@ export default function Tasks() {
                <div
                     style={{
                          display: "flex",
+                         alignContent: "center",
                          justifyContent: "end",
                          position: "relative",
                     }}
                >
-                    <Fab
+                    <div
                          style={{
                               position: "fixed",
                               bottom: 20,
                               textTransform: "none",
                          }}
-                         variant="extended"
-                         size="large"
-                         color="primary"
-                         aria-label="add"
-                         onClick={handleClickOpen}
                     >
-                         <AddIcon sx={{ mr: 1 }} />
-                         Nouveau
-                    </Fab>
+                         <Fab
+                              style={{
+                                   marginRight: 10,
+                              }}
+                              size="medium"
+                              color="secondary"
+                              aria-label="menu"
+                         >
+                              {dialOpen ? <CloseIcon /> : <MenuIcon />}
+                         </Fab>
+                         <Fab
+                              style={{
+                                   textTransform: "none",
+                              }}
+                              variant="extended"
+                              size="large"
+                              color="primary"
+                              aria-label="add"
+                              onClick={handleClickOpen}
+                         >
+                              <AddIcon sx={{ mr: 1 }} />
+                              Nouveau
+                         </Fab>
+                    </div>
                </div>
+               <Toolbar />
                <Create open={open} handleClose={handleClose} />
           </Box>
      );
