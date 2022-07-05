@@ -21,7 +21,7 @@
      flex-wrap: nowrap;
 }
 .navbar_nav_connected {
-     height: 10vh;
+     height: 9vh;
      display: "flex";
      align-content: center;
      justify-content: space-between;
@@ -56,3 +56,5 @@
      display: flex;
      justify-content: space-between;
 }
+
+/*PAGES*/
